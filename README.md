@@ -1,24 +1,20 @@
 # SummonsBoard
 
-TODO: Write a gem description
+SummonsBoard's event scheduler
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'summons_board'
+    gem 'summons_board', :git => "git@github.com:yoshiori/summons_board.git"
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install summons_board
-
 ## Usage
 
-TODO: Write usage instructions here
+[sample app](https://github.com/yoshiori/utopia_dungeon_notifier)
 
 ## Contributing
 
