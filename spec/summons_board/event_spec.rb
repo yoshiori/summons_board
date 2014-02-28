@@ -13,21 +13,24 @@ describe SummonsBoard::Event do
     it "uid 0 is AM 8:00 start" do
       expect(
         uid0.schedule(target: local(2014,2,27))
-      ).to eq times: [
-        local(2014,2,27,8)...local(2014,2,27,9),
-        local(2014,2,27,13)...local(2014,2,27,14),
-        local(2014,2,27,18)...local(2014,2,27,19),
-      ]
+      ).to eq weekly: SummonsBoard::Event::WEEKLY_EVENT[4],
+              times: [
+                local(2014,2,27,8)...local(2014,2,27,9),
+                local(2014,2,27,13)...local(2014,2,27,14),
+                local(2014,2,27,18)...local(2014,2,27,19),
+              ]
+
     end
 
     it "uid 4 is PM 12:00 start" do
       expect(
         uid4.schedule(target: local(2014,2,27))
-      ).to eq times: [
-        local(2014,2,27,12)...local(2014,2,27,13),
-        local(2014,2,27,17)...local(2014,2,27,18),
-        local(2014,2,27,22)...local(2014,2,27,23),
-      ]
+      ).to eq weekly: SummonsBoard::Event::WEEKLY_EVENT[4],
+              times: [
+                local(2014,2,27,12)...local(2014,2,27,13),
+                local(2014,2,27,17)...local(2014,2,27,18),
+                local(2014,2,27,22)...local(2014,2,27,23),
+              ]
     end
   end
 
