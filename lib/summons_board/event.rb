@@ -2,7 +2,7 @@ require 'active_support/core_ext'
 
 class SummonsBoard::Event
 
-  BASE_DATE = DateTime.new(2014, 2, 27)
+  BASE_DATE = DateTime.new(2014, 2, 27, 0, 0, 0, DateTime.now.zone)
   TYPE_TABLE_COUNT = 5
 
   def initialize(uid: )
