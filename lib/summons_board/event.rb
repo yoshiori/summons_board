@@ -33,6 +33,6 @@ class SummonsBoard::Event
   end
 
   def time_type(target: )
-    @type + (target - BASE_DATE).to_i % TYPE_TABLE_COUNT
+    (@type + (target - BASE_DATE).to_i) % TYPE_TABLE_COUNT
   end
 end

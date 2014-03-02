@@ -32,6 +32,21 @@ describe SummonsBoard::Event do
                 local(2014,2,27,22)...local(2014,2,27,23),
               ]
     end
+
+    context "2014/3/2 uid 2" do
+      let(:uid2) { SummonsBoard::Event.new(uid: "000000200") }
+
+      it "uid 2 is AM 8:00 start" do
+        expect(
+          uid2.schedule(target: local(2014,3,2))
+        ).to eq weekly: SummonsBoard::Event::WEEKLY_EVENT[0],
+                times: [
+                  local(2014,3,2,8)...local(2014,3,2,9),
+                  local(2014,3,2,13)...local(2014,3,2,14),
+                  local(2014,3,2,18)...local(2014,3,2,19),
+                ]
+      end
+    end
   end
 
   describe "#active?" do
