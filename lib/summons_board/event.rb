@@ -5,6 +5,8 @@ class SummonsBoard::Event
   BASE_DATE = DateTime.new(2014, 2, 27, 0, 0, 0, DateTime.now.zone)
   TYPE_TABLE_COUNT = 5
   WEEKLY_EVENT = %w(コイン 無し オール系 グリン系 コマドラ系 リード系 バトルチケット)
+  UTOPIA_ATTRIBUTES = %w(闇 水 光 火 木)
+
 
   def initialize(uid: )
     @type = uid[-3].to_i % TYPE_TABLE_COUNT
@@ -14,7 +16,9 @@ class SummonsBoard::Event
     start_time = target.beginning_of_day
     time_list = time_lists[time_type(target: target)]
     { weekly: WEEKLY_EVENT[target.wday],
-      times: time_list.map { |hour| (start_time + hour.hour)...(start_time + hour.hour + 1.hour) } }
+      times: time_list.map { |hour| (start_time + hour.hour)...(start_time + hour.hour + 1.hour) },
+      attribute: UTOPIA_ATTRIBUTES[target.wday]
+    }
   end
 
   def active?(target: DateTime.now)

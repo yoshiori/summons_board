@@ -18,7 +18,8 @@ describe SummonsBoard::Event do
                 local(2014,2,27,8)...local(2014,2,27,9),
                 local(2014,2,27,13)...local(2014,2,27,14),
                 local(2014,2,27,18)...local(2014,2,27,19),
-              ]
+              ],
+              attribute: SummonsBoard::Event::UTOPIA_ATTRIBUTES[4]
 
     end
 
@@ -30,7 +31,8 @@ describe SummonsBoard::Event do
                 local(2014,2,27,12)...local(2014,2,27,13),
                 local(2014,2,27,17)...local(2014,2,27,18),
                 local(2014,2,27,22)...local(2014,2,27,23),
-              ]
+              ],
+              attribute: SummonsBoard::Event::UTOPIA_ATTRIBUTES[4]
     end
 
     context "2014/3/2 uid 2" do
@@ -44,7 +46,8 @@ describe SummonsBoard::Event do
                   local(2014,3,2,8)...local(2014,3,2,9),
                   local(2014,3,2,13)...local(2014,3,2,14),
                   local(2014,3,2,18)...local(2014,3,2,19),
-                ]
+                ],
+                attribute: SummonsBoard::Event::UTOPIA_ATTRIBUTES[0]
       end
     end
   end
